@@ -60,8 +60,4 @@ class MusicStreetTest {
         Assert.assertNotNull("skip if overlap", skippingNode)
         Assert.assertEquals("correct position", 10 - 6, skippingNode?.position)
     }
-
-    @Test fun someTest() {
-        getNodes(intArrayOf(1,3), 7, 2, 3).forEach { println("${it.position} ${it.type} ${it.skipOneEnding}") }
-    }
 }

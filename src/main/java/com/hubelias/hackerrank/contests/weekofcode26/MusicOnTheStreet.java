@@ -8,6 +8,7 @@ import java.util.Scanner;
 /**
  * Solution for Music on the Street problem - 4th challenge of Week od Code 26 contest
  * Difficulty lvl: Hard
+ * Solves all 22 test cases.
  * https://www.hackerrank.com/contests/w26/challenges/street-parade-1
  */
 public class MusicOnTheStreet {
@@ -26,7 +27,7 @@ public class MusicOnTheStreet {
         System.out.println(solve(a, m, h1, h2));
     }
 
-    static int solve(int[] a, int m, int h1, int h2) {
+    private static int solve(int[] a, int m, int h1, int h2) {
         List<Node> nodes = new MusicStreet(a, m, h1, h2).getNodes();
         for (int i = 0; i < nodes.size(); i++) {
             Node current = nodes.get(i);

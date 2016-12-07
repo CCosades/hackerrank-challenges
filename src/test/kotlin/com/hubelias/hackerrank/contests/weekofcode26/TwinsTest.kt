@@ -21,4 +21,11 @@ class TwinsTest {
         Assert.assertEquals(0, Twins.solve(1, 3))
         Assert.assertEquals(0, Twins.solve(1, 4))
     }
+
+    @Test fun edgeCases() {
+        Assert.assertEquals(1, Twins.solve(3,5))
+        Assert.assertEquals(0, Twins.solve(5,6))
+        Assert.assertEquals(1, Twins.solve(5,7))
+        Assert.assertEquals(3, Twins.solve(3,13))
+    }
 }
