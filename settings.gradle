@@ -1,1 +1,2 @@
 include 'algorithms-data-structures', 'ai', 'hkr-java'
+include 'hkr-sql'
