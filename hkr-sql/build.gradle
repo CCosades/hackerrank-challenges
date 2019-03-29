@@ -1,4 +1,4 @@
-plugins { 
+plugins {
     id 'java'
 }
 
@@ -8,5 +8,9 @@ version 'unspecified'
 sourceCompatibility = 1.8
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.4.1'
+    testImplementation "org.junit.jupiter:junit-jupiter:5.4.1"
+
+    testImplementation "org.testcontainers:junit-jupiter:1.11.1"
+    testImplementation "org.testcontainers:mssqlserver:1.11.1"
+    testImplementation "com.microsoft.sqlserver:mssql-jdbc:6.1.0.jre8"
 }
