@@ -1,2 +1,1 @@
-select * from CITY;
-select ID from CITY;
+select max(POPULATION)-min(POPULATION) from CITY;
