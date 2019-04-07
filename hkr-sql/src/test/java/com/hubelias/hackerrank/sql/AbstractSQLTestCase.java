@@ -27,7 +27,7 @@ public abstract class AbstractSQLTestCase {
     @Test
     void testQuery() throws SQLException, IOException {
         final String classNamePrefix = camelCaseToKebabCase(getClass().getSimpleName());
-        final List<String> setupCommands = extractSQL(classNamePrefix + "-setup.sql");
+        final List<String> setupCommands = extractSQL(classNamePrefix + ".setup.sql");
         final List<String> queryCommands = extractSQL(classNamePrefix + ".sql");
 
         try (Connection connection = DriverManager.getConnection(
@@ -70,6 +70,7 @@ public abstract class AbstractSQLTestCase {
 
             while (line != null) {
                 builder.append(line.trim());
+                builder.append(" ");
                 if (line.endsWith(";")) {
                     setupCommands.add(builder.toString());
                     builder = new StringBuilder();
